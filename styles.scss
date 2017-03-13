@@ -1,0 +1,159 @@
+$font-size:16px;
+
+html,
+body,
+.page {
+  height: 100%;
+  width: 100%;
+  font-size:$font-size;
+}
+
+a {
+  color: black;
+  text-decoration: line-through;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  transition: 1s all;
+  position: fixed;
+  top: 0;
+  .bottom {
+    position: absolute;
+    bottom: 4%;
+    transition: 1s all;
+    color: black;
+    &.contact {
+      left: 5%;
+      padding: 0px 10px;
+      opacity: 0;
+    }
+    &.siteBy {
+      right: 5%;
+      background: rgba(255, 255, 255, 0.25);
+      padding: 2.5px 10px;
+      opacity: 0;
+      a {
+        color: black;
+        border-bottom: 1px solid black;
+      }
+    }
+    &.scrollMore {
+      $chevronLength: 30px;
+      cursor: pointer;
+      height: 5px;
+      width: $chevronLength;
+      background: transparent;
+      padding: 25px 50px 10px 50px;
+      transform: rotate(0deg) translateX(-25%);
+      animation: scrollIt 5s infinite ease;
+      opacity: 1;
+      &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: $chevronLength;
+        background: black;
+        transform: rotate(-30deg);
+        transform-origin: left;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: $chevronLength;
+        background: black;
+        transform: rotate(210deg);
+        transform-origin: left;
+      }
+    }
+  }
+  .logo {
+    max-width: 400px;
+    max-height: 253px;
+    width: auto;
+    height: auto;
+  }
+  &.sticky {
+    height: 100px;
+    position: fixed;
+    top: 0;
+    .logo {
+      height: 80%;
+      width: auto;
+    }
+    .bottom {
+      bottom: 45%;
+      opacity: 1;
+    }
+    .scrollMore {
+      opacity: 0.0;
+    }
+  }
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+  &.sticky {
+    opacity: 0.25;
+  }
+}
+
+.content-container {
+  margin-top: 200vh;
+  .content {
+    margin: auto;
+    width: 60%;
+    $spacing: 25px;
+    p {
+      margin-bottom: $spacing;
+      background: rgba(255, 255, 255, 0.25);
+      padding: $spacing/2 $spacing;
+    }
+    img {
+      display: block;
+      margin: auto;
+      width: 100%;
+      margin-bottom: $spacing;
+      &.content_logo{
+        width:60%;
+      }
+    }
+    ul {
+      list-style-type: disc;
+      li {
+        margin-left: $spacing;
+      }
+    }
+  }
+  
+}
+
+@keyframes scrollIt {
+  0%,
+  100% {
+    bottom: 4%;
+  }
+  50% {
+    bottom: 2%;
+  }
+}
