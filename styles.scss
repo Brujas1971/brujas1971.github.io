@@ -49,30 +49,33 @@ a {
     &.scrollMore {
       $chevronLength: 30px;
       cursor: pointer;
-      height: 5px;
-      width: $chevronLength;
+      height: 30px;
+      width: 60px;
       background: transparent;
-      padding: 25px 50px 10px 50px;
+      padding: 10px;
       transform: rotate(0deg) translateX(-25%);
-      animation: scrollIt 5s infinite ease;
       opacity: 1;
-      &:after {
-        content: '';
-        position: absolute;
-        height: 2px;
-        width: $chevronLength;
-        background: black;
-        transform: rotate(-30deg);
-        transform-origin: left;
-      }
       &:before {
         content: '';
         position: absolute;
-        height: 2px;
+        height: 4px;
         width: $chevronLength;
         background: black;
         transform: rotate(210deg);
         transform-origin: left;
+        top: 25px;
+        left: 40px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: $chevronLength;
+        background: black;
+        transform: rotate(-30deg);
+        transform-origin: left;
+        top: 26px;
+        left: 39px;
       }
     }
   }
@@ -140,16 +143,5 @@ video {
         margin-left: $spacing;
       }
     }
-  }
-  
-}
-
-@keyframes scrollIt {
-  0%,
-  100% {
-    bottom: 4%;
-  }
-  50% {
-    bottom: 2%;
   }
 }
