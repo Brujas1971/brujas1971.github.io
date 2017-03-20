@@ -5,24 +5,24 @@
   src: url('/fonts/texgyreheros-bold.otf');
 }
 
-$font-size:16px;
-
 html,
 body,
 .page {
   height: 100%;
   width: 100%;
-  font-size:$font-size;
   font-family: TexGyreHeros, Arial, sans-serif;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
 a {
-  color: black;
-  text-decoration: line-through;
+  text-decoration: none;
+  color: #ffffff;
   &:hover {
-    color: black;
-    text-decoration: none;
+    text-decoration: line-through;
+  }
+  &:visited {
+    color: #ffffff;
   }
 }
 
@@ -133,6 +133,7 @@ video {
     &__panel {
       background: #000000;
       color: #ffffff;
+      margin-bottom: 80vh;
       .description {
         padding: 10px;
       }
@@ -141,7 +142,6 @@ video {
       display: block;
       margin: auto;
       width: 100%;
-      margin-bottom: $spacing;
       &.content_logo{
         width:60%;
       }
