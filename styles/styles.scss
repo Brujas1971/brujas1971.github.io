@@ -31,7 +31,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   &:hover {
-    text-decoration: line-through;
+    text-decoration: underline line-through overline;
   }
   &:visited {
     color: #ffffff;
