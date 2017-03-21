@@ -5,6 +5,17 @@
   src: url('/fonts/texgyreheros-bold.otf');
 }
 
+@keyframes pulsebw {
+  0% {
+    fill: #000000;
+    fill: red;
+  }
+  100% {
+    fill: #ffffff;
+    fill: blue;
+  }
+}
+
 html,
 body,
 .page {
@@ -12,6 +23,7 @@ body,
   width: 100%;
   font-family: TexGyreHeros, Arial, sans-serif;
   font-size: 16px;
+  line-height: 19px;
   letter-spacing: 1px;
 }
 
@@ -38,6 +50,7 @@ a {
   .bottom {
     position: absolute;
     bottom: 4%;
+    left: 50%;
     transition: 1s all;
     color: black;
     &.contact {
@@ -62,7 +75,7 @@ a {
       width: 60px;
       background: transparent;
       padding: 10px;
-      transform: rotate(0deg) translateX(-25%);
+      transform: translateX(-50%);
       opacity: 1;
       &:before {
         content: '';
@@ -93,6 +106,9 @@ a {
     max-height: 253px;
     width: auto;
     height: auto;
+    text {
+      fill: #000000;
+    }
   }
   &.sticky {
     height: 100px;
@@ -101,6 +117,13 @@ a {
     .logo {
       height: 80%;
       width: auto;
+      text {
+        animation-name: pulsebw;
+        animation-direction: alternate;
+        animation-duration: 0.333s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
     }
     .bottom {
       bottom: 45%;
@@ -135,7 +158,7 @@ video {
       color: #ffffff;
       margin-bottom: 80vh;
       .description {
-        padding: 10px;
+        padding: 20px 10px;
       }
     }
     img {
