@@ -138,6 +138,16 @@ video {
       margin-bottom: 80vh;
       .description {
         padding: 20px 10px;
+        margin: 0 auto;
+        @media screen and (min-width: 568px) {
+          width: 480px;
+        }
+        @media screen and (min-width: 768px) {
+          width: 720px;
+        }
+        p {
+          margin-bottom: 20px;
+        }
       }
     }
     img {
