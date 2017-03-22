@@ -1,16 +1,39 @@
 @import "reset";
+@font-face {
+  font-family: 'TexGyreHeros-Regular';
+  src: url('/webfonts/texgyreheros-regular-webfont.woff') format('woff');
+}
 
 @font-face {
-  font-family: TexGyreHeros;
-  src: url('/fonts/texgyreheros-bold.otf');
+  font-family: 'TexGyreHeros-Bold';
+  font-weight: bold;
+  src: url('webfonts/texgyreheros-bold-webfont.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'TexGyreHeros-Italic';
+  font-style:italic;
+  src: url('/webfonts/texgyreheros-italic-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TexGyreHeros-BoldItalic';
+  font-weight:bold;
+  font-style:italic;
+  src: url('/webfonts/texgyreheros-bolditalic-webfont.woff') format('woff');
+}
+
+$font-reg: 'TexGyreHeros-Regular';
+$font-bold: 'TexGyreHeros-Bold';
+$font-ital: 'TexGyreHeros-Italic';
+$font-boldital:'TexGyreHeros-BoldItalic';
 
 html,
 body,
 .page {
   height: 100%;
   width: 100%;
-  font-family: TexGyreHeros, Arial, sans-serif;
+  font-family: $font-bold, Arial, sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -18,10 +41,13 @@ body,
 }
 
 a {
-  text-decoration: none;
+  text-decoration: line-through;
   color: #ffffff;
   &:hover {
-    text-decoration: underline line-through overline;
+    //text-decoration: underline overline;
+    text-decoration: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
   }
   &:visited {
     color: #ffffff;
@@ -133,30 +159,44 @@ video {
   margin-top: 200vh;
   .content {
     $spacing: 25px;
+    transform-style: preserve-3d;
     &__panel {
       background: #000000;
       color: #ffffff;
-      margin-bottom: 80vh;
+      margin-bottom: 100vh;
+      background-size: cover;
+      background-position: 50% 50%;
+      &--bottom {
+        margin-bottom: 50vh;
+      }
       .description {
-        padding: 20px 10px;
+        padding: 20px 20%;
         margin: 0 auto;
-        @media screen and (min-width: 568px) {
-          width: 480px;
+        color: white;
+        @media screen and (max-width: 568px) {
+          padding:20px 2%;
         }
-        @media screen and (min-width: 768px) {
-          width: 720px;
+        @media screen and (max-width: 768px) {
+          padding: 20px 5%;
         }
         p {
           margin-bottom: 20px;
         }
+        &.site-by-oob {
+          text-align: center;
+        }
       }
+    }
+    &__img {
+      height: 120vh;
     }
     img {
       display: block;
       margin: auto;
       width: 100%;
-      &.content_logo{
-        width:60%;
+      display: none;
+      &.content_logo {
+        width: 60%;
       }
     }
     ul {
