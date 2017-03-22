@@ -25,12 +25,12 @@ $(document).ready(function (e) {
     }, 1500);
   }
 });
-
+/*
 $(window).on("load", function () {
   
   $(".tilt-effect").each(function (e) {
     $(this).parent().attr("height", $(this).height());
     $(this).parent().attr("width", docWidth);
-    var tiltfx = new TiltFx($(this));
   });
 });
+*/

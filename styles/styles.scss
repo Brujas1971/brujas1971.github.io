@@ -44,21 +44,6 @@ a {
     left: 50%;
     transition: 1s all;
     color: black;
-    &.contact {
-      left: 5%;
-      padding: 0px 10px;
-      opacity: 0;
-    }
-    &.siteBy {
-      right: 5%;
-      background: rgba(255, 255, 255, 0.25);
-      padding: 2.5px 10px;
-      opacity: 0;
-      a {
-        color: black;
-        border-bottom: 1px solid black;
-      }
-    }
     &.scrollMore {
       $chevronLength: 30px;
       cursor: pointer;
@@ -101,6 +86,7 @@ a {
   &.sticky {
     height: 100px;
     position: fixed;
+    z-index:100;
     top: 0;
     .logo {
       height: 80px;
