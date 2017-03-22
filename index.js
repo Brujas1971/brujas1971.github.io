@@ -1,7 +1,9 @@
-$(document).ready(function(e) {
+var docHeight = window.innerHeight;
+var docWidth = window.innerWidth;
 
-  var docHeight = window.innerHeight;
-  $(document).scroll(function(e) {
+$(document).ready(function (e) {
+
+  $(document).scroll(function (e) {
     var scrollPos = $(document).scrollTop();
     if (scrollPos >= 250) {
       $(".nav").addClass("sticky");
@@ -13,7 +15,7 @@ $(document).ready(function(e) {
       $("video").removeClass("sticky");
     }
   });
-  $(".scrollMore").click(function(e) {
+  $(".scrollMore").click(function (e) {
     scrollToStart();
   });
 
@@ -22,4 +24,13 @@ $(document).ready(function(e) {
       scrollTop: docHeight * 1.85
     }, 1500);
   }
+});
+
+$(window).on("load", function () {
+  
+  $(".tilt-effect").each(function (e) {
+    $(this).parent().attr("height", $(this).height());
+    $(this).parent().attr("width", docWidth);
+    var tiltfx = new TiltFx($(this));
+  });
 });
