@@ -1,8 +1,9 @@
 @import "reset";
-@font-face {
+
+/*@font-face {
   font-family: TexGyreHeros;
   src: url('/fonts/texgyreheros-bold.otf');
-}
+}*/
 
 html,
 body,
@@ -82,11 +83,12 @@ a {
     max-height: 253px;
     width: auto;
     height: auto;
+    cursor: pointer;
   }
   &.sticky {
     height: 100px;
     position: fixed;
-    z-index:100;
+    z-index: 100;
     top: 0;
     .logo {
       height: 80px;
@@ -123,16 +125,20 @@ video {
     &__panel {
       background: #000000;
       color: #ffffff;
-      margin-bottom: 80vh;
+      margin-bottom: 50vh;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 80vh;
+      }
       .description {
-        padding: 20px 10px;
-        color:white;
+        color: white;
         margin: 0 auto;
+        padding: 20px;
         @media screen and (min-width: 568px) {
           width: 480px;
         }
         @media screen and (min-width: 768px) {
           width: 720px;
+          padding: 20px 10px;
         }
         p {
           margin-bottom: 20px;
@@ -140,7 +146,10 @@ video {
       }
     }
     &__img {
-      height: 120vh;
+      height: auto;
+      @media screen and (min-width: 768px) {
+        height: 120vh;
+      }
     }
     img {
       display: block;
@@ -166,32 +175,34 @@ video {
   }
 }
 
+
 /* TILT STUFF */
+
 .tilt {
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .tilt__back,
 .tilt__front {
-	width: 100%;
-	height: 100%;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .tilt__back {
-	position: relative;
+  position: relative;
 }
 
 .tilt__front {
-	position: absolute;
-	top: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

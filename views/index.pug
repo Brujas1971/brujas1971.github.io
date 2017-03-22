@@ -41,7 +41,7 @@ html(lang='en')
                 |  1971
                 
           - var numImages = 15;
-          - var tiltOptions = '{"extraImgs": 4, "resetOnLeave" : false, "opacity": 0.85, "movement": {   "perspective": 1000,      "translateX": -15,      "translateY": -15,      "translateZ": 20,      "rotateX": 15,      "rotateY": 15    }  }';
+          - var tiltOptions = '{"extraImgs": 4, "bgfixed" : true, "resetOnLeave" : false, "opacity": 0.85, "movement": {   "perspective": 1000,      "translateX": -15,      "translateY": -15,      "translateZ": 20,      "rotateX": 15,      "rotateY": 15    }  }';
           - for (var x = 1; x < numImages; x++) {
             .content__panel.content__img
               img.tilt-effect(src='images/1971_'+x+'.jpg', alt='1971', data-tilt-options= tiltOptions )
@@ -51,6 +51,7 @@ html(lang='en')
             p.description
               | site by 
               a(href='http://outof.business', target='_blank') outof.business
+              
     script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
-    script(src='index.js')
-    script(src='tiltfx.js')
+    script(src='scripts/index.js')
+    script(src='scripts/tiltfx.js')
