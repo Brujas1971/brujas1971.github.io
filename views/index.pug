@@ -5,6 +5,7 @@ html(lang='en')
     title BRUJAS X 1971
     link(rel='stylesheet', type='text/css', href='styles/styles.css')
   body
+    inlcude includes/vars.pug
     .page
       video#bgvid(poster='https://ksr-ugc.imgix.net/assets/013/761/803/82224e082286846f791db08ca160eaa7_original.png?w=1552&h=873&fit=fill&bg=000000&v=1476200772&auto=format&q=92&s=272c1926033bee7c9ada3dd9f983f182', playsinline='', autoplay='', muted='', loop='')
         source(src='https://ksr-video.imgix.net/projects/2641739/video-713751-h264_high.mp4', type='video/mp4')
@@ -15,8 +16,7 @@ html(lang='en')
         .content
           .content__panel
             article.description
-              p
-                | In generations past people not so different from you or me attempted to fight the government, build alternatives to the dominant power structure, and defend their communities with arms and ideas alike. Some cooked their neighbors breakfast and organized political education, while others robbed banks and broke their sisters out of prison. Some made art and wrote communiques, took care of each other&apos;s children, or fundraised. A lot of this work remains integral parts of our resistance movements against white supremacy and capitalism. But over the last fifty years, the institutions that govern our lives, the bureaucracies that dictate what resources we have access to, and the cages we are thrown into if we disobey have become even more insidious. This is where we are today, attempting to answer these questions together: How do we break our loved ones out of jail if our communities are rapidly transforming into open-air prisons? How do we resist and thwart widespread surveillance and policing? How do we kill the cop in our own heads? What does it look like to create a world where &quot;Black lives matter&quot; and defend that space from opposing forces? What would it really mean to beat back fascism? These are the questions and ideas that shaped this project. The first run of 1971 streetwear was a wildly successful experiment to see if it is possible with the help of a small group of friends to materially support people who are criminalized and locked up by the state through cultural production.
+              p #{missionStatement}
               p
                 | Designed by emerging artists 
                 a(href='https://soundcloud.com/czarquan', target='_blank', title='VINNY6NAMES') VINNY6NAMES
@@ -42,10 +42,8 @@ html(lang='en')
                 
           - var numImages = 15;
           - var tiltOptions = '{"extraImgs": 4, "bgfixed" : true, "resetOnLeave" : false, "opacity": 0.85, "movement": {   "perspective": 1000,      "translateX": -15,      "translateY": -15,      "translateZ": 20,      "rotateX": 15,      "rotateY": 15    }  }';
-          - for (var x = 1; x < numImages; x++) {
             .content__panel.content__img
-              img.tilt-effect(src='images/1971_'+x+'.jpg', alt='1971', data-tilt-options= tiltOptions )
-          -}
+              img.tilt-effect(src='images/1971_1.jpg', alt='1971', data-tilt-options= tiltOptions )
          
           .content__panel.site-by-oob
             p.description

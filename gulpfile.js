@@ -19,7 +19,7 @@ gulp.task('sass', function () {
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('views/*.pug')
-    .pipe(pug({}))
+    .pipe(pug())
     .pipe(gulp.dest("./"));
 });
 

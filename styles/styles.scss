@@ -13,8 +13,12 @@ body,
   font-family: TexGyreHeros, Arial, sans-serif;
   font-weight: bold;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.5em;
   letter-spacing: 1px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -125,31 +129,63 @@ video {
     &__panel {
       background: #000000;
       color: #ffffff;
-      margin-bottom: 50vh;
-      @media screen and (min-width: 768px) {
-        margin-bottom: 80vh;
-      }
-      .description {
-        color: white;
-        margin: 0 auto;
-        padding: 20px;
-        @media screen and (min-width: 568px) {
-          width: 480px;
-        }
-        @media screen and (min-width: 768px) {
-          width: 720px;
-          padding: 20px 10px;
-        }
-        p {
-          margin-bottom: 20px;
-        }
-      }
     }
     &__img {
       height: auto;
       @media screen and (min-width: 768px) {
-        height: 120vh;
+        //height: 120vh;
       }
+    }
+    &__blurb {
+      //font-size: 24px;
+      line-height: 1.5em;
+      font-weight: bold;
+      width: 100%;
+      padding: 30px 50px;
+      p,h1 {
+        color: white;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 720px;
+        @media screen and (max-width: 768px) {
+          max-width: 480px;
+        }
+        @media screen and (max-width: 450px) {
+          padding: 20px;
+        }
+      }
+      h1 {
+        font-size:24px;
+        margin-bottom:5px;
+      }
+      @media screen and (max-width: 768px) {
+        width: 60%;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 16px;
+        width: 100%;
+      }
+      /*
+      &--left {
+        margin-left: 5%;
+        @media screen and (max-width: 768px) {
+          margin-left:50%;
+        }
+        @media screen and (max-width: 450px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      &--right {
+        margin-left: 30%;
+        @media screen and (max-width: 768px) {
+          margin-left: 50%;
+        }
+        @media screen and (max-width: 450px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }*/
     }
     img {
       display: block;
@@ -170,9 +206,23 @@ video {
 
 .site-by-oob {
   margin-bottom: 50vh !important;
-  .description {
+  p {
     text-align: center;
   }
+}
+
+.fullGap {
+  margin-bottom: 100vh;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 95vh;
+  }
+  @media screen and (max-width: 450px) {
+    margin-bottom: 90vh;
+  }
+}
+
+.halfGap {
+  margin-bottom: 45vh;
 }
 
 

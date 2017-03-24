@@ -2,8 +2,10 @@ var docHeight = window.innerHeight;
 var docWidth = window.innerWidth;
 
 $(document).ready(function (e) {
-  
-  $(document).scrollTop(0);
+
+  $(window).scrollTop(0);
+
+  $("img").unveil(500);
   
   $(document).scroll(function (e) {
     var scrollPos = $(document).scrollTop();
@@ -30,15 +32,19 @@ $(document).ready(function (e) {
     }, time);
   }
 });
+
 /*
 //  Programatically sets height & width of image parent container
 //  Apparently is not necessary
 
 $(window).on("load", function () {
-  
-  $(".tilt-effect").each(function (e) {
+  var tilt;
+  $(".tilt-img").each(function (e) {
+    var thisImg = $(this);
+    console.log(thisImg);
     $(this).parent().attr("height", $(this).height());
     $(this).parent().attr("width", docWidth);
+    tilt = new TiltFx(thisImg);
   });
 });
 */
