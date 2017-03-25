@@ -1,13 +1,9 @@
 @import "reset";
+
 @font-face {
   font-family: 'TexGyreHeros-Regular';
   src: url('/webfonts/texgyreheros-regular-webfont.woff') format('woff');
 }
-
-/*@font-face {
-  font-family: TexGyreHeros;
-  src: url('/fonts/texgyreheros-bold.otf');
-}*/
 
 @font-face {
   font-family: 'TexGyreHeros-Italic';
@@ -188,30 +184,6 @@ video {
         font-size: 16px;
         width: 100%;
       }
-      /*
-      &--left {
-        margin-left: 5%;
-        @media screen and (max-width: 768px) {
-          margin-left:50%;
-        }
-        @media screen and (max-width: 450px) {
-          margin-left: auto;
-          margin-right: auto;
-        }
-        &.site-by-oob {
-          text-align: center;
-        }
-      }
-      &--right {
-        margin-left: 30%;
-        @media screen and (max-width: 768px) {
-          margin-left: 50%;
-        }
-        @media screen and (max-width: 450px) {
-          margin-left: auto;
-          margin-right: auto;
-        }
-      }*/
     }
     &__img {
       height: 120vh;
@@ -252,36 +224,4 @@ video {
 
 .halfGap {
   margin-bottom: 45vh;
-}
-
-
-/* TILT STUFF */
-
-.tilt {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.tilt__back,
-.tilt__front {
-  width: 100%;
-  height: 100%;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.tilt__back {
-  position: relative;
-}
-
-.tilt__front {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
