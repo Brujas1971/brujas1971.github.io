@@ -152,15 +152,13 @@ video {
     &__img {
       height: auto;
       @media screen and (min-width: 768px) {
-        //height: 120vh;
       }
     }
     &__blurb {
-      //font-size: 24px;
       line-height: 1.5em;
       font-weight: bold;
       width: 100%;
-      padding: 30px 50px;
+      padding: 20px 10px;
       p,h1 {
         color: white;
         margin: 0 auto;
@@ -169,24 +167,11 @@ video {
         @media screen and (max-width: 768px) {
           max-width: 480px;
         }
-        @media screen and (max-width: 450px) {
-          padding: 20px;
-        }
       }
       h1 {
         font-size:24px;
         margin-bottom:5px;
       }
-      @media screen and (max-width: 768px) {
-        width: 60%;
-      }
-      @media screen and (max-width: 450px) {
-        font-size: 16px;
-        width: 100%;
-      }
-    }
-    &__img {
-      height: 120vh;
     }
     img {
       display: block;
@@ -223,5 +208,5 @@ video {
 }
 
 .halfGap {
-  margin-bottom: 45vh;
+  margin-bottom: 50vh;
 }
