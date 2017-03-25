@@ -202,12 +202,6 @@ video {
 
 .fullGap {
   margin-bottom: 100vh;
-  @media screen and (max-width: 768px) {
-    margin-bottom: 95vh;
-  }
-  @media screen and (max-width: 450px) {
-    margin-bottom: 90vh;
-  }
 }
 
 .halfGap {
