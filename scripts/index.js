@@ -1,7 +1,12 @@
+var docHeight = window.innerHeight;
+var docWidth = window.innerWidth;
+
 $(document).ready(function (e) {
 
-  var docHeight = window.innerHeight;
-  var docWidth = window.innerWidth;
+  $(window).scrollTop(0);
+
+  $("img").unveil(500);
+
   $(document).scroll(function (e) {
     var scrollPos = $(document).scrollTop();
     if (scrollPos >= 250) {
@@ -29,12 +34,15 @@ $(document).ready(function (e) {
   });
 
   $(".scrollMore").click(function (e) {
-    scrollToStart();
+    scrollToStart(1500);
+  });
+  $(".logo").click(function (e) {
+    scrollToStart(1500);
   });
 
-  function scrollToStart() {
+  function scrollToStart(time) {
     $("html, body").animate({
       scrollTop: docHeight * 1.85
-    }, 1500);
+    }, time);
   }
 });

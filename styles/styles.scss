@@ -4,11 +4,10 @@
   src: url('/webfonts/texgyreheros-regular-webfont.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'TexGyreHeros-Bold';
-  font-weight: bold;
-  src: url('webfonts/texgyreheros-bold-webfont.woff') format('woff');
-}
+/*@font-face {
+  font-family: TexGyreHeros;
+  src: url('/fonts/texgyreheros-bold.otf');
+}*/
 
 @font-face {
   font-family: 'TexGyreHeros-Italic';
@@ -36,15 +35,18 @@ body,
   font-family: $font-bold, Arial, sans-serif;
   font-weight: bold;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.5em;
   letter-spacing: 1px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: line-through;
   color: #ffffff;
   &:hover {
-    //text-decoration: underline overline;
     text-decoration: none;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -69,21 +71,6 @@ a {
     left: 50%;
     transition: 1s all;
     color: black;
-    &.contact {
-      left: 5%;
-      padding: 0px 10px;
-      opacity: 0;
-    }
-    &.siteBy {
-      right: 5%;
-      background: rgba(255, 255, 255, 0.25);
-      padding: 2.5px 10px;
-      opacity: 0;
-      a {
-        color: black;
-        border-bottom: 1px solid black;
-      }
-    }
     &.scrollMore {
       $chevronLength: 30px;
       cursor: pointer;
@@ -122,10 +109,12 @@ a {
     max-height: 253px;
     width: auto;
     height: auto;
+    cursor: pointer;
   }
   &.sticky {
     height: 100px;
     position: fixed;
+    z-index: 100;
     top: 0;
     .logo {
       height: 80px;
@@ -163,29 +152,66 @@ video {
     &__panel {
       background: #000000;
       color: #ffffff;
-      margin-bottom: 100vh;
-      background-size: cover;
-      background-position: 50% 50%;
-      &--bottom {
-        margin-bottom: 50vh;
+    }
+    &__img {
+      height: auto;
+      @media screen and (min-width: 768px) {
+        //height: 120vh;
       }
-      .description {
-        padding: 20px 20%;
-        margin: 0 auto;
+    }
+    &__blurb {
+      //font-size: 24px;
+      line-height: 1.5em;
+      font-weight: bold;
+      width: 100%;
+      padding: 30px 50px;
+      p,h1 {
         color: white;
-        @media screen and (max-width: 568px) {
-          padding:20px 2%;
-        }
+        margin: 0 auto;
+        width: 100%;
+        max-width: 720px;
         @media screen and (max-width: 768px) {
-          padding: 20px 5%;
+          max-width: 480px;
         }
-        p {
-          margin-bottom: 20px;
+        @media screen and (max-width: 450px) {
+          padding: 20px;
+        }
+      }
+      h1 {
+        font-size:24px;
+        margin-bottom:5px;
+      }
+      @media screen and (max-width: 768px) {
+        width: 60%;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 16px;
+        width: 100%;
+      }
+      /*
+      &--left {
+        margin-left: 5%;
+        @media screen and (max-width: 768px) {
+          margin-left:50%;
+        }
+        @media screen and (max-width: 450px) {
+          margin-left: auto;
+          margin-right: auto;
         }
         &.site-by-oob {
           text-align: center;
         }
       }
+      &--right {
+        margin-left: 30%;
+        @media screen and (max-width: 768px) {
+          margin-left: 50%;
+        }
+        @media screen and (max-width: 450px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }*/
     }
     &__img {
       height: 120vh;
@@ -194,7 +220,6 @@ video {
       display: block;
       margin: auto;
       width: 100%;
-      display: none;
       &.content_logo {
         width: 60%;
       }
@@ -206,4 +231,57 @@ video {
       }
     }
   }
+}
+
+.site-by-oob {
+  margin-bottom: 50vh !important;
+  p {
+    text-align: center;
+  }
+}
+
+.fullGap {
+  margin-bottom: 100vh;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 95vh;
+  }
+  @media screen and (max-width: 450px) {
+    margin-bottom: 90vh;
+  }
+}
+
+.halfGap {
+  margin-bottom: 45vh;
+}
+
+
+/* TILT STUFF */
+
+.tilt {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.tilt__back {
+  position: relative;
+}
+
+.tilt__front {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

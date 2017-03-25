@@ -1,0 +1,24 @@
+{
+  "name": "brujas1971",
+  "version": "1.0.0",
+  "description": "- to run locally run `http-server` in the project directory\r - to compile sass run `sass --watch styles/styles.scss:styles/styles.css`",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dillonburns@bitbucket.org/teamoutofbusiness/brujas-x-1971-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/teamoutofbusiness/brujas-x-1971-site#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.2"
+  }
+}

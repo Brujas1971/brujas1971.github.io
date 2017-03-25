@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    title BRUJAS X 1971
+    link(rel='stylesheet', type='text/css', href='styles/styles.css')
+  body
+    inlcude includes/vars.pug
+    .page
+      video#bgvid(poster='https://ksr-ugc.imgix.net/assets/013/761/803/82224e082286846f791db08ca160eaa7_original.png?w=1552&h=873&fit=fill&bg=000000&v=1476200772&auto=format&q=92&s=272c1926033bee7c9ada3dd9f983f182', playsinline='', autoplay='', muted='', loop='')
+        source(src='https://ksr-video.imgix.net/projects/2641739/video-713751-h264_high.mp4', type='video/mp4')
+      .nav
+        img.logo(src='images/1971.png', alt='1971 logo ')
+        .bottom.scrollMore
+      .content-container
+        .content
+          .content__panel
+            article.description
+              p #{missionStatement}
+              p
+                | Designed by emerging artists 
+                a(href='https://soundcloud.com/czarquan', target='_blank', title='VINNY6NAMES') VINNY6NAMES
+                |  of 
+                a(href='https://www.instagram.com/nocturnalsonsposse/', target='_blank', title='Nocturnal Sons Posse') Nocturnal Sons Posse
+                |  and 
+                a(href='https://www.instagram.com/robingiordani/', target='_blank', title='Robin Giordani') Robin Giordani
+                |  of 
+                a(href='https://www.instagram.com/brujas/', target='_blank', title='BRUJAS') BRUJAS
+                |  / 
+                a(href='http://www.cornersociety.com/', target='_blank', name='The Corner Society') The Corner Society
+                | , the initial run is inspired by prison rebels, deviants, and the brujas of the past, present and future. 1971 was inspired by the events that occurred on September 9, 1971. 1,000 prisoners, most of them black and brown, 
+                a(href='http://www.newyorker.com/magazine/2016/08/29/learning-from-the-slaughter-in-attica', target='_blank', title='LEARNING FROM THE SLAUGHTER IN ATTICA') rioted and seized control of Attica prison
+                |  in New York. After four days of negotiations and taking hostages, authorities agreed to 28 of the prisoners&apos; demands such as better medical treatment, fair visitation rights, and an end to physical brutality. 45 years later, prisoners launched a 
+                a(href='http://prisonstrike.com/', target='_black', name='#PRISONSTRIKE') national work strike
+                |  demanding an end to prison slavery, which entered its second consecutive month during the launch of the project, October, 2016.
+              p
+                | To all our backers and supporters who are interested in what profits after production and shipping looked like check out our costs sheet, showing how and where funds were distributed. This also serves as a pretty cool guide to understanding the components that make a project like this possible, we hope it is useful for our co-conspirators who are interested in doing similar projects!
+              p
+                | With Love,
+                br
+                |  1971
+                
+          - var numImages = 15;
+          - var tiltOptions = '{"extraImgs": 4, "bgfixed" : true, "resetOnLeave" : false, "opacity": 0.85, "movement": {   "perspective": 1000,      "translateX": -15,      "translateY": -15,      "translateZ": 20,      "rotateX": 15,      "rotateY": 15    }  }';
+            .content__panel.content__img
+              img.tilt-effect(src='images/1971_1.jpg', alt='1971', data-tilt-options= tiltOptions )
+         
+          .content__panel.site-by-oob
+            p.description
+              | site by 
+              a(href='http://outof.business', target='_blank') outof.business
+              
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+    script(src='scripts/index.js')
+    script(src='scripts/tiltfx.js')
