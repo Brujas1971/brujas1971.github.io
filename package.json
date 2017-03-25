@@ -4,6 +4,7 @@
   "description": "- to run locally run `http-server` in the project directory\r - to compile sass run `sass --watch styles/styles.scss:styles/styles.css`",
   "main": "index.js",
   "scripts": {
+    "start": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
