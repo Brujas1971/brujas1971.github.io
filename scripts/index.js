@@ -32,19 +32,3 @@ $(document).ready(function (e) {
     }, time);
   }
 });
-
-/*
-//  Programatically sets height & width of image parent container
-//  Apparently is not necessary
-
-$(window).on("load", function () {
-  var tilt;
-  $(".tilt-img").each(function (e) {
-    var thisImg = $(this);
-    console.log(thisImg);
-    $(this).parent().attr("height", $(this).height());
-    $(this).parent().attr("width", docWidth);
-    tilt = new TiltFx(thisImg);
-  });
-});
-*/
