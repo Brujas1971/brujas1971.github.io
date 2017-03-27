@@ -18,19 +18,6 @@ $(document).ready(function (e) {
       $(".nav").removeClass("sticky");
       $("video").removeClass("sticky");
     }
-
-    /*var movementStrength = 10;
-    var height = movementStrength / docHeight;
-    var width = movementStrength / docWidth;
-    $(".content__img").mousemove(function (e) {
-      var pageX = e.pageX - ($(window).width() / 2);
-      var pageY = e.pageY - ($(window).height() / 2);
-      var newvalueX = width * pageX * -1 - 25;
-      var newvalueY = height * pageY * -1 - 50;
-      $(this).css("background-position", newvalueX + "px     " + newvalueY + "px");
-    });*/
-
-
   });
 
   $(".scrollMore").click(function (e) {
@@ -45,4 +32,10 @@ $(document).ready(function (e) {
       scrollTop: docHeight * 1.85
     }, time);
   }
+
+  (function($) {
+    window.fnames = new Array();
+    window.ftypes = new Array();
+    fnames[0]='EMAIL';ftypes[0]='email';
+  }(jQuery));
 });
