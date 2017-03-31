@@ -31,6 +31,16 @@ html(lang='en')
     meta(property='og:url' content='http://1971.nyc')
     meta(property='og:site_name' content='1971')
     meta(property='og:type' content='website')
+
+    // Google Analytics
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91781552-4', 'auto');
+      ga('send', 'pageview');
   body
     .page
       video#bgvid(poster='https://ksr-ugc.imgix.net/assets/013/761/803/82224e082286846f791db08ca160eaa7_original.png?w=1552&h=873&fit=fill&bg=000000&v=1476200772&auto=format&q=92&s=272c1926033bee7c9ada3dd9f983f182', playsinline='', autoplay='', muted='', loop='')
